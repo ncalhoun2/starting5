@@ -1,0 +1,30 @@
+
+
+/* 
+These styles are pretty common throughout the site
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+.background{
+width: 100em;
+height: 100em;
+position: absolute;
+background-color: #000E29;
+overflow: hidden; /* Added */
+}
+.heading-text{
+    color: #226CE0;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+}
+.table-background {
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(to bottom, rgba(34, 108, 224, 1), rgba(34, 108, 224, 0));;
+    position: relative;
+    border-radius: 30px;
+}
