@@ -29,32 +29,93 @@
                 <p class="heading-text" style="display: flex; align-self: center;
                 font-size: 30px;">Point Scoring Leaders</p>
                 <div class="table-background">
-                    <table>
+                    <table class="table" id="point-scorers">
                         <tr>
-                            <th>Name</th>
-                            <th>PTS</th>
-                            <th>TRB</th>
-                            <th>AST</th>
-                        </tr>
-                        <tr>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                        </tr>
-                        <tr>
-                            <td>Data 4</td>
-                            <td>Data 5</td>
-                            <td>Data 6</td>
+                            <th class="table-text">Name</th>
+                            <th class="table-text">PTS</th>
+                            <th class="table-text">TRB</th>
+                            <th class="table-text">AST</th>
                         </tr>
                     </table>
                 </div>
             </div>
-            <div class="table-background">
 
+            <div style="display: flex; flex-direction: column;">
+                <p class="heading-text" style="display: flex; align-self: center;
+                font-size: 30px;">Top Rebounders</p>
+                <div class="table-background">
+                    <table class="table" id="top-rebounds">
+                        <tr>
+                            <th class="table-text">Name</th>
+                            <th class="table-text">PTS</th>
+                            <th class="table-text">TRB</th>
+                            <th class="table-text">AST</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         
        
     </div>
+    <script>
+
+
+        function populateData(data, tableId){
+            const firstFive = data.results.slice(0,5)
+            firstFive.forEach((player)=>{
+                const playerRow = document.createElement('tr')
+
+                const name = document.createElement('td')
+                name.innerText = player.player_name;
+                const points = document.createElement('td')
+                points.innerText = player.PTS;
+                const rebounds = document.createElement('td')
+                rebounds.innerText = player.TRB;
+                const assists = document.createElement('td')
+                assists.innerText = player.AST;
+
+                playerRow.appendChild(name)
+                playerRow.appendChild(points)
+                playerRow.appendChild(rebounds)
+                playerRow.appendChild(assists)
+
+                Array.from(playerRow.children).forEach((child)=>{ // why doesnt this work
+                    child.classList.add('table-text')
+                })
+
+                const pointsTable = document.getElementById(tableId)
+                pointsTable.appendChild(playerRow)
+
+            })
+            
+
+
+        }
+
+        function retreiveData(url, tableId){
+            fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the JSON response
+            })
+            .then(data => {
+                // Handle the JSON data returned by the API
+                populateData(data, tableId)
+            })
+            .catch(error => {
+                // Handle any errors that occurred during the fetch
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        }
+
+
+        retreiveData('https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/', 'point-scorers')
+        retreiveData('https://nba-stats-db.herokuapp.com/api/top_rebounds/totals/2023/', 'top-rebounds')
+
+
+    </script>
 </body>
 </html>
