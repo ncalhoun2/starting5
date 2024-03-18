@@ -31,7 +31,7 @@
                 <i style="color: #226CE0;" class="fa-solid fa-chart-line fa-2x"></i>
                 <p class="side-menu-text" style="color: #226CE0;">Statistics</p>
             </div>
-            <div class="side-menu-box">
+            <div class="side-menu-box" id="fantasy-bttn">
                 <i style="color: #D9D9D9;" class="fa-solid fa-dice fa-2x"></i>
                 <p class="side-menu-text">Fantasy</p>
             </div>
@@ -138,6 +138,9 @@
         }
         document.getElementById('menu-icon').onclick = () =>{
             document.getElementsByClassName('side-menu')[0].style.visibility = 'visible';
+        }
+        document.getElementById('fantasy-bttn').onclick = () =>{
+            window.location.href = '../fantasy/fantasy.html'
         }
 
     </script>

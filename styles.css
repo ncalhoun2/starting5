@@ -43,7 +43,7 @@ overflow: hidden; /* Added */
     font-weight: 300;
 }
 .side-menu{
-    visibility: visible;
+    visibility: hidden;
     background-color: #226CE0;
     width: 25%;
     position: absolute;
@@ -77,4 +77,10 @@ overflow: hidden; /* Added */
     margin-right: auto;
     width: 90%;
     border-radius: 13px;
+}
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
