@@ -16,6 +16,26 @@
 </head>
 <body>
     <div class="background">
+        <div class="side-menu">
+
+            <p id="back-bttn" class="font" style="color: #D9D9D9; width: 100%; display: flex; justify-content: flex-end;">Back <i style="margin-left: 3%; margin-right: 3%;" class="fa-solid fa-arrow-right"></i></p>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-house fa-2x"></i>
+                <p class="side-menu-text">Home</p>
+            </div>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-chart-simple fa-2x"></i>
+                <p class="side-menu-text">Standings</p>
+            </div>
+            <div class="side-menu-box-selected">
+                <i style="color: #226CE0;" class="fa-solid fa-chart-line fa-2x"></i>
+                <p class="side-menu-text" style="color: #226CE0;">Statistics</p>
+            </div>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-dice fa-2x"></i>
+                <p class="side-menu-text">Fantasy</p>
+            </div>
+        </div>
         <div class="top-bar">
             <div id="menu-icon-container">
                 <i id="menu-icon" class="fa-sharp fa-solid fa-layer-group"></i>
@@ -55,8 +75,6 @@
                 </div>
             </div>
         </div>
-        
-       
     </div>
     <script>
 
@@ -115,6 +133,12 @@
         retreiveData('https://nba-stats-db.herokuapp.com/api/playerdata/topscorers/total/season/2023/', 'point-scorers')
         retreiveData('https://nba-stats-db.herokuapp.com/api/top_rebounds/totals/2023/', 'top-rebounds')
 
+        document.getElementById('back-bttn').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'hidden';
+        }
+        document.getElementById('menu-icon').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'visible';
+        }
 
     </script>
 </body>
