@@ -45,27 +45,37 @@
             <h1 class="heading-text" style="margin-left: 2%; font-size: 60px">Fantasy</h1>
             <i class="fa-solid fa-dice fa-3x" style="color: #226CE0; margin-left: 3%;"></i>
         </div>
-        <!-- Row of tables -->
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
-            <div style="display: flex; flex-direction: column;">
-                <p class="heading-text" style="display: flex; align-self: center;
-                font-size: 30px;">Point Scoring Leaders</p>
-                <div class="table-background">
-                    <table class="table" id="point-scorers">
-                        <tr>
-                            <th class="table-text">Name</th>
-                            <th class="table-text">PTS</th>
-                            <th class="table-text">TRB</th>
-                            <th class="table-text">AST</th>
-                        </tr>
-                    </table>
-                </div>
+
+        <p class="font" style="color: #226CE0; width: 100%; text-align: center; 
+        font-size: 25px;">Invite a player</p>
+
+        <div style="display: flex; flex-direction: row;
+        justify-content: center;">
+            <div style="background-color: #D9D9D9;
+            margin-left: 30px; margin-right: 30px;
+            border-radius: 13px; color: #226CE0;
+            padding-left: 30px; padding-right: 30px;">
+                <p class="font">starting5fantasy/game/59383</p>
             </div>
-
-
+            <div style="background-color: #226CE0;
+            border-radius: 13px; color: #D9D9D9;
+            padding-left: 30px; padding-right: 30px;">
+                <p class="font">Copy Link <i class="fa-regular fa-copy"></i></p>
+            </div>
         </div>
+
+
+
+
     </div>
     <script>
+
+        document.getElementById('back-bttn').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'hidden';
+        }
+        document.getElementById('menu-icon').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'visible';
+        }
 
 
     </script>
