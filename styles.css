@@ -24,6 +24,9 @@ overflow: hidden; /* Added */
 .font{
     font-family: "Urbanist", sans-serif;
 }
+.font{
+    font-family: "Urbanist", sans-serif;
+}
 .table-background {
     width: 500px;
     height: 500px;
@@ -84,3 +87,21 @@ overflow: hidden; /* Added */
     justify-content: flex-start;
     align-items: center;
 }
+.greyrectangle{
+    width: 100em;
+    height: 10em;
+    position: relative;
+    background-color: #dddfdf;
+    }
+.bluerectangle{
+    width: 100em;
+    height: 7em;
+    position: relative;
+    background-color: #0b0bf4;
+    }
+.whiterectangle{
+    width: 250px;
+    height: 120px;
+    position: relative;
+    background-color: #f8fafa;
+    }
