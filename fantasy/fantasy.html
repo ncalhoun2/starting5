@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Statistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46a9aec258.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../menu-styles.css">
+    <link rel="stylesheet" href="stats-styles.css">
+
+</head>
+<body>
+    <div class="background">
+        <div class="side-menu">
+
+            <p id="back-bttn" class="font" style="color: #D9D9D9; width: 100%; display: flex; justify-content: flex-end;">Back <i style="margin-left: 3%; margin-right: 3%;" class="fa-solid fa-arrow-right"></i></p>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-house fa-2x"></i>
+                <p class="side-menu-text">Home</p>
+            </div>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-chart-simple fa-2x"></i>
+                <p class="side-menu-text">Standings</p>
+            </div>
+            <div class="side-menu-box-selected">
+                <i style="color: #226CE0;" class="fa-solid fa-chart-line fa-2x"></i>
+                <p class="side-menu-text" style="color: #226CE0;">Statistics</p>
+            </div>
+            <div class="side-menu-box" id="fantasy-bttn">
+                <i style="color: #D9D9D9;" class="fa-solid fa-dice fa-2x"></i>
+                <p class="side-menu-text">Fantasy</p>
+            </div>
+        </div>
+
+
+        <div class="top-bar">
+            <div id="menu-icon-container">
+                <i id="menu-icon" class="fa-sharp fa-solid fa-layer-group"></i>
+            </div>
+            <h1 class="heading-text" style="margin-left: 2%; font-size: 60px">Fantasy</h1>
+            <i class="fa-solid fa-dice fa-3x" style="color: #226CE0; margin-left: 3%;"></i>
+        </div>
+
+        <p class="font" style="color: #226CE0; width: 100%; text-align: center; 
+        font-size: 25px;">Invite a player</p>
+
+        <div style="display: flex; flex-direction: row;
+        justify-content: center;">
+            <div style="background-color: #D9D9D9;
+            margin-left: 30px; margin-right: 30px;
+            border-radius: 13px; color: #226CE0;
+            padding-left: 30px; padding-right: 30px;">
+                <p class="font">starting5fantasy/game/59383</p>
+            </div>
+            <div style="background-color: #226CE0;
+            border-radius: 13px; color: #D9D9D9;
+            padding-left: 30px; padding-right: 30px;">
+                <p class="font">Copy Link <i class="fa-regular fa-copy"></i></p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script>
+
+        document.getElementById('back-bttn').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'hidden';
+        }
+        document.getElementById('menu-icon').onclick = () =>{
+            document.getElementsByClassName('side-menu')[0].style.visibility = 'visible';
+        }
+
+
+    </script>
+</body>
+</html>
