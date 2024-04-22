@@ -62,6 +62,15 @@ document.getElementById('menu-icon').onclick = () =>{
 document.getElementById('fantasy-bttn').onclick = () =>{
     window.location.href = '../fantasy/fantasy.html'
 }
+document.getElementById('stats-bttn').onclick = () =>{
+    window.location.href = '../player-stats/player-stats.html'
+}
+document.getElementById('standings-bttn').onclick = () =>{
+    window.location.href = '../standings/standings.html'
+}
+document.getElementById('home-bttn').onclick = () =>{
+    window.location.href = '../index.html'
+}
 const copyBttn = document.getElementById('cpy-link-bttn')
 copyBttn.onclick = () =>{
     copyBttn.style.backgroundColor = 'green'
