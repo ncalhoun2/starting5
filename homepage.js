@@ -10,9 +10,9 @@ function getNBAUrl() {
     day = day < 10 ? '0' + day : day;
   
     // Construct the URL with the current date
-    const url = `https://api-nba-v1.p.rapidapi.com/games?date=${year}-${month}-${day}`;
+    const theUrl = `https://api-nba-v1.p.rapidapi.com/games?date=${year}-${month}-${day}`;
   
-    return url;
+    return theUrl;
   }
 
 const url = getNBAUrl();
