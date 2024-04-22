@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/46a9aec258.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../menu-styles.css">
-    <link rel="stylesheet" href="stats-styles.css">
+    <script defer src="./fantasy.js"></script>
 
 </head>
 <body>
@@ -27,16 +27,15 @@
                 <i style="color: #D9D9D9;" class="fa-solid fa-chart-simple fa-2x"></i>
                 <p class="side-menu-text">Standings</p>
             </div>
-            <div class="side-menu-box-selected">
-                <i style="color: #226CE0;" class="fa-solid fa-chart-line fa-2x"></i>
-                <p class="side-menu-text" style="color: #226CE0;">Statistics</p>
+            <div class="side-menu-box">
+                <i style="color: #D9D9D9;" class="fa-solid fa-chart-line fa-2x"></i>
+                <p class="side-menu-text">Statistics</p>
             </div>
-            <div class="side-menu-box" id="fantasy-bttn">
-                <i style="color: #D9D9D9;" class="fa-solid fa-dice fa-2x"></i>
-                <p class="side-menu-text">Fantasy</p>
+            <div class="side-menu-box-selected" id="fantasy-bttn">
+                <i style="color: #226CE0;" class="fa-solid fa-dice fa-2x"></i>
+                <p class="side-menu-text" style="color: #226CE0;">Fantasy</p>
             </div>
         </div>
-
 
         <div class="top-bar">
             <div id="menu-icon-container">
@@ -59,8 +58,8 @@
             </div>
             <div style="background-color: #226CE0;
             border-radius: 13px; color: #D9D9D9;
-            padding-left: 30px; padding-right: 30px;">
-                <p class="font">Copy Link <i class="fa-regular fa-copy"></i></p>
+            padding-left: 30px; padding-right: 30px;" id="cpy-link-bttn">
+                <p class="font" id="cpy-bttn-text">Copy Link <i class="fa-regular fa-copy"></i></p>
             </div>
         </div>
 
@@ -68,16 +67,5 @@
 
 
     </div>
-    <script>
-
-        document.getElementById('back-bttn').onclick = () =>{
-            document.getElementsByClassName('side-menu')[0].style.visibility = 'hidden';
-        }
-        document.getElementById('menu-icon').onclick = () =>{
-            document.getElementsByClassName('side-menu')[0].style.visibility = 'visible';
-        }
-
-
-    </script>
 </body>
 </html>
